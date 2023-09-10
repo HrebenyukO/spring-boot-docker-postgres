@@ -1,0 +1,10 @@
+services:
+  db:
+    image: postgres:14-alpine
+    container_name: db
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_DB: automobiles
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres

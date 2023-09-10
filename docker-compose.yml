@@ -29,7 +29,7 @@ services:
     #networks:
      # - backend
     # entrypoint: [ "java", "-Xms512m", "-Xmx1g", "-jar" ]
-  # Database Service (Postgres)
+  #Database Service (Postgres)
   #db:
     # Give the container the name postgres-db. You can change to something else.
    # container_name: postgres-db
