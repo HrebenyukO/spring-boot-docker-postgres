@@ -25,8 +25,8 @@ class SecurityConfig {
 
         httpSecurity
                 .authorizeHttpRequests(registry -> registry
-                        .requestMatchers(HttpMethod.GET,"/api/**").hasRole("USER")
-                        .requestMatchers(HttpMethod.POST,"/api/**").hasRole("PERSON")
+                    /*    .requestMatchers(HttpMethod.GET,"/api/**").hasRole("USER")
+                        .requestMatchers(HttpMethod.POST,"/api/**").hasRole("PERSON")*/
                         .anyRequest().authenticated()
                 )
                 .oauth2ResourceServer(oauth2Configurer -> oauth2Configurer

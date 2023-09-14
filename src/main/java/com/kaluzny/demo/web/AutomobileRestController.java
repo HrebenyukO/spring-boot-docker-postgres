@@ -129,9 +129,11 @@ public class AutomobileRestController {
             @ApiResponse(responseCode = "400", description = "Invalid ID supplied"),
             @ApiResponse(responseCode = "404", description = "Automobile not found"),
             @ApiResponse(responseCode = "405", description = "Validation exception")})
+
     @PutMapping("/automobiles/{id}")
     @ResponseStatus(HttpStatus.OK)
     //@CachePut(value = "automobile", key = "#id")
+    @PreAuthorize("hasRole('PAINTER')")
     public Automobile refreshAutomobile(
             @Parameter(description = "Id of the Automobile to be update. Cannot be empty.", required = true)
             @PathVariable Long id,
